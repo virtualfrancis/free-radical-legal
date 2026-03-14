@@ -89,6 +89,8 @@
       <li>Recent location searches</li>
       <li>Selected activity mode</li>
       <li>Cached conditions data for offline use</li>
+      <li>Trips, gear loadouts, and trip notes and ratings you create</li>
+      <li>Custom activity photos you select from your photo library</li>
     </ul>
 
     <h2>Third-Party Services</h2>
@@ -127,6 +129,11 @@
         nearby SNOTEL stations via the USDA Natural Resources Conservation Service public API.
         This is a public government service.
       </li>
+      <li>
+        <strong>NIFC / ArcGIS (ESRI)</strong> - wildfire perimeter data. Your coordinates are used
+        to check for active fire perimeters via the National Interagency Fire Center's public ArcGIS
+        service. This is a public government service.
+      </li>
     </ul>
 
     <h2>Location Data</h2>
@@ -137,11 +144,19 @@
       can deny location access and search for locations manually.
     </p>
 
+    <h2>Photo Library Access</h2>
+    <p>
+      The app requests access to your photo library solely to allow you to set a custom background
+      photo for each activity mode. Photos you select are stored locally on your device and are
+      never uploaded or transmitted anywhere. Photo library access is only triggered when you
+      explicitly long-press an activity photo to customize it.
+    </p>
+
     <h2>Data Retention and Deletion</h2>
     <p>
-      Recent searches and cached conditions data are stored locally on your device using
-      AsyncStorage. This data is never transmitted to the developer. Uninstalling the app
-      removes all locally stored data permanently.
+      All app data (recent searches, cached conditions, trips, gear loadouts, and custom photos)
+      is stored locally on your device using AsyncStorage. This data is never transmitted to the
+      developer. Uninstalling the app removes all locally stored data permanently.
     </p>
 
     <h2>Children</h2>
