@@ -13,57 +13,18 @@
       line-height: 1.7;
       padding: 48px 24px;
     }
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .back {
-      display: inline-block;
-      font-size: 13px;
-      color: #71717a;
-      text-decoration: none;
-      margin-bottom: 32px;
-    }
+    .container { max-width: 720px; margin: 0 auto; }
+    .back { display: inline-block; font-size: 13px; color: #71717a; text-decoration: none; margin-bottom: 32px; }
     .back:hover { color: #a5b4fc; }
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #f4f4f5;
-      margin-bottom: 8px;
-    }
-    .subtitle {
-      font-size: 14px;
-      color: #71717a;
-      margin-bottom: 48px;
-    }
-    h2 {
-      font-size: 14px;
-      font-weight: 600;
-      color: #a5b4fc;
-      margin-top: 40px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    p {
-      color: #a1a1aa;
-      margin-bottom: 16px;
-    }
-    ul {
-      color: #a1a1aa;
-      padding-left: 20px;
-      margin-bottom: 16px;
-    }
+    h1 { font-size: 28px; font-weight: 700; color: #f4f4f5; margin-bottom: 8px; }
+    .subtitle { font-size: 14px; color: #71717a; margin-bottom: 48px; }
+    h2 { font-size: 14px; font-weight: 600; color: #a5b4fc; margin-top: 40px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+    p { color: #a1a1aa; margin-bottom: 16px; }
+    ul { color: #a1a1aa; padding-left: 20px; margin-bottom: 16px; }
     li { margin-bottom: 8px; }
     a { color: #a5b4fc; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    footer {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 1px solid #27272a;
-      font-size: 13px;
-      color: #52525b;
-    }
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid #27272a; font-size: 13px; color: #52525b; }
   </style>
 </head>
 <body>
@@ -75,8 +36,10 @@
     <p class="subtitle">Free Radical &bull; Effective March 2026</p>
 
     <p>
-      Free Radical is an outdoor conditions app providing weather, tides, avalanche, snowpack, and
-      related data for outdoor activities. This policy explains what data is handled when you use the app.
+      Free Radical is an outdoor conditions app providing weather, forecasts, tides, avalanche danger,
+      snowpack, wind aloft, wildfire, air quality, moon data, river flow, marine swell, golden hour,
+      climbing routes, and trip and gear planning for outdoor activities. This policy explains what data
+      is handled when you use the app.
     </p>
 
     <h2>Data We Collect</h2>
@@ -87,9 +50,9 @@
     <p>All data stored by the app remains on your device, including:</p>
     <ul>
       <li>Recent location searches</li>
-      <li>Selected activity mode</li>
-      <li>Cached conditions data for offline use</li>
-      <li>Trips, gear loadouts, and trip notes and ratings you create</li>
+      <li>Selected activity mode and unit preferences</li>
+      <li>Cached conditions data for recently viewed locations</li>
+      <li>Trips, gear loadouts, gear weights, and trip notes and ratings you create</li>
       <li>Custom activity photos you select from your photo library</li>
     </ul>
 
@@ -102,22 +65,33 @@
     </p>
     <ul>
       <li>
-        <strong>Open-Meteo</strong> - weather and forecast data. Your coordinates are sent to
-        retrieve local conditions. Open-Meteo is a free, open-source service.
+        <strong>Open-Meteo</strong> - weather, forecast, wind aloft, barometric pressure, and marine
+        swell data. Your coordinates are sent to retrieve local and marine conditions. Open-Meteo is
+        a free, open-source service.
         <a href="https://open-meteo.com/en/terms" target="_blank">Privacy info</a>
       </li>
       <li>
-        <strong>Nominatim / OpenStreetMap</strong> - location search and geocoding. When you
-        search for a location by name, your query is sent to Nominatim's servers.
+        <strong>Nominatim / OpenStreetMap</strong> - location search and geocoding. When you search
+        for a location by name, your query is sent to Nominatim's servers.
         <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank">OpenStreetMap Foundation Privacy Policy</a>
       </li>
       <li>
-        <strong>USGS National Map (EPQS)</strong> - elevation data. Your coordinates are sent
-        to the USGS public elevation API. This is a public government service.
+        <strong>USGS National Map (EPQS)</strong> - elevation data. Your coordinates are sent to
+        the USGS public elevation API. This is a public government service.
+      </li>
+      <li>
+        <strong>USGS Water Resources (NWIS)</strong> - river gauge and stream flow data. Your
+        coordinates are used to find nearby stream gauges via the USGS National Water Information
+        System public API. This is a public government service.
       </li>
       <li>
         <strong>NOAA Tides and Currents</strong> - tide predictions. Your coordinates are used
         to find nearby tide stations via NOAA's public API. This is a public government service.
+      </li>
+      <li>
+        <strong>National Weather Service (NWS)</strong> - active weather alerts, watches, and
+        warnings. Your coordinates are sent to the NWS public API to retrieve alerts for your area.
+        This is a public government service.
       </li>
       <li>
         <strong>Avalanche.org</strong> - avalanche danger ratings. Your coordinates are used
@@ -134,6 +108,11 @@
         to check for active fire perimeters via the National Interagency Fire Center's public ArcGIS
         service. This is a public government service.
       </li>
+      <li>
+        <strong>OpenBeta</strong> - rock climbing area and route data. Your coordinates are used
+        to find nearby climbing areas via the OpenBeta public GraphQL API.
+        <a href="https://openbeta.io/" target="_blank">OpenBeta</a>
+      </li>
     </ul>
 
     <h2>Location Data</h2>
@@ -141,7 +120,7 @@
       The app requests access to your device's location to automatically load conditions for
       your current position. Location data is used only to fetch conditions data from the
       third-party services listed above and is never stored on external servers by us. You
-      can deny location access and search for locations manually.
+      can deny location access and search for locations manually at any time.
     </p>
 
     <h2>Photo Library Access</h2>
@@ -152,11 +131,20 @@
       explicitly long-press an activity photo to customize it.
     </p>
 
+    <h2>App Updates</h2>
+    <p>
+      Free Radical uses Expo's over-the-air update system to deliver app improvements without requiring
+      a full App Store or Google Play update. When the app launches, it may contact
+      <strong>u.expo.dev</strong> (operated by Expo / Vercel) to check for available updates.
+      No personal information is included in this request. Only the app's identifier and current
+      version are transmitted. This is standard behavior for apps built with the Expo framework.
+    </p>
+
     <h2>Data Retention and Deletion</h2>
     <p>
       All app data (recent searches, cached conditions, trips, gear loadouts, and custom photos)
-      is stored locally on your device using AsyncStorage. This data is never transmitted to the
-      developer. Uninstalling the app removes all locally stored data permanently.
+      is stored locally on your device. This data is never transmitted to the developer.
+      Uninstalling the app removes all locally stored data permanently.
     </p>
 
     <h2>Children</h2>
@@ -172,11 +160,9 @@
     </p>
 
     <h2>Contact</h2>
-    <p>For privacy questions, contact: <a href="mailto:support@gowstudios.com">support@gowstudios.com</a></p>
+    <p>For privacy questions, contact: <a href="mailto:gowstudios@protonmail.com">gowstudios@protonmail.com</a></p>
 
-    <footer>
-      &copy; 2026 Summit. All rights reserved.
-    </footer>
+    <footer>&copy; 2026 GOW Studios. All rights reserved.</footer>
 
   </div>
 </body>

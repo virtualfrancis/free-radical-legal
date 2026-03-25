@@ -14,32 +14,42 @@
       padding: 48px 24px;
     }
     .container { max-width: 720px; margin: 0 auto; }
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #f4f4f5;
-      margin-bottom: 8px;
-    }
-    .subtitle {
-      font-size: 14px;
-      color: #71717a;
-      margin-bottom: 48px;
-    }
-    a {
+    h1 { font-size: 28px; font-weight: 700; color: #f4f4f5; margin-bottom: 8px; }
+    .subtitle { font-size: 14px; color: #71717a; margin-bottom: 48px; }
+    .links { display: flex; flex-direction: column; gap: 16px; }
+    a.doc-link {
       display: block;
-      color: #a5b4fc;
+      background: #18181b;
+      border: 1px solid #3f3f46;
+      border-radius: 8px;
+      padding: 20px 24px;
       text-decoration: none;
-      margin-bottom: 12px;
-      font-size: 16px;
+      color: #f4f4f5;
+      transition: border-color 0.2s;
     }
-    a:hover { text-decoration: underline; }
+    a.doc-link:hover { border-color: #a5b4fc; }
+    a.doc-link .doc-title { font-size: 16px; font-weight: 600; color: #a5b4fc; margin-bottom: 4px; }
+    a.doc-link .doc-desc { font-size: 13px; color: #71717a; }
+    footer { margin-top: 64px; font-size: 13px; color: #52525b; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Free Radical</h1>
     <p class="subtitle">Legal Documents</p>
-    <a href="privacy/">Privacy Policy</a>
+
+    <div class="links">
+      <a href="privacy/" class="doc-link">
+        <div class="doc-title">Privacy Policy</div>
+        <div class="doc-desc">How Free Radical handles your data</div>
+      </a>
+      <a href="terms/" class="doc-link">
+        <div class="doc-title">Terms of Use</div>
+        <div class="doc-desc">Terms and conditions for using Free Radical</div>
+      </a>
+    </div>
+
+    <footer>&copy; 2026 GOW Studios. All rights reserved.</footer>
   </div>
 </body>
 </html>
